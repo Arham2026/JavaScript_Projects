@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+#header {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #021214fd;
+    color: #ffffff;
+    gap: 20px;
+
+}
+
+#left #right{
+    flex: 1;
+    text-align: center;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+#right {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    gap: 30px;
+}
+a {
+    /* to make anchor tag look like a normal text */
+    text-decoration: none;
+    color: inherit;
+    font-size: 25px;
+}
+#left{
+    margin: 0px;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    text-align: left;
+}
+
+#simple:hover,#hex:hover{
+    color: #b733df;
+    cursor: pointer;
+    
+}
+
+ul{
+    list-style-type:none;
+    padding: 30px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li{
+    margin-right: 20px;
+}
+
+.The-change{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    height: 100%;
+
+}
+
+
+#color{
+    margin-top: 60px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    
+}
+
+#color h2{
+    padding: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+#btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    
+}
+
+
+button{
+    padding: 10px 20px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
