@@ -1,0 +1,151 @@
+/* Global styles */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-secondary, "Open Sans", sans-serif);
+  background: var(--clr-grey-10, #f0f0f0);
+  color: var(--clr-grey-1, #333);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+nav {
+  background: var(--clr-white, #fff);
+  box-shadow: var(--light-shadow, 0 5px 15px rgba(0, 0, 0, 0.1));
+  padding: 1rem;
+}
+
+
+.nav-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-primary-5, hsl(205, 78%, 60%));
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.nav-toggle:hover{
+  z-index: 1000;
+  /* bounce */
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);;
+  transform:  rotate(90deg) ;
+}
+.nav-links{
+  flex-basis: 100%;
+}
+
+ul {
+   margin-top: 10px;
+  list-style: none;
+}
+
+li {
+  padding: 5px;
+  margin-bottom: 3px;
+}
+
+a {
+  text-decoration: none;
+  padding: 5px;
+  color: var(--clr-grey-3, #666);
+  font-size: 1rem;
+  padding-right: 100%;
+  transition: var(--transition, all 0.3s linear);
+}
+
+a:hover {
+  background: var(--clr-primary-8, hsl(205, 86%, 81%));
+  color: var(--clr-primary-5, hsl(205, 78%, 60%));
+  /* a pure way of learning it is good like I have no Idea how to make this effect like changing of the padding but right now I just did that */
+}
+
+/* Default styles for small screens */
+.nav-links {
+
+  overflow: hidden;
+  display: none;
+ transition: transform 0.3s ease;
+   /* Hide the nav links by default */
+}
+
+.show-links {
+  display: block;
+  height: 10rem;
+  /* Show the nav links when toggled */
+}
+
+
+/* Blocking the social Media links in the default criteria */
+.social-icons{
+  display: none;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 800px) {
+  .nav-header {
+    flex-direction: row;
+  }
+   .nav-links{
+    display: flex;
+    flex-basis: 50%;
+   }
+   
+  ul {
+    display: flex; /* Display the nav links in a row */
+    align-items: center;
+    justify-content: center;
+  }
+
+  li {
+    padding: 10px;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-top: 5px;
+    margin-right: 3px;
+  }
+  a{
+    padding: 4px;
+  }
+  a:hover {
+    background: var(--clr-primary-8, hsl(205, 86%, 81%));
+    color: var(--clr-primary-5, hsl(205, 78%, 60%));
+    padding: 3px;
+    /* a pure way of learning it is good like I have no Idea how to make this effect like changing of the padding but right now I just did that */
+  }
+
+  
+  .nav-toggle {
+    display: none;
+
+     /* Hide the toggle button on larger screens  */
+  }
+
+
+  .social-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    padding-right: 20px;
+  }
+}
